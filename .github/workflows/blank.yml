@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Function to display the profile
+void displayProfile(string pet, string name, string nickname,
+                    string birthday, string address,
+                    string favSong, string motivation,
+                    string support) {
+
+    cout << "=========================================\n";
+
+    if (pet == "Dog") {
+        cout << "🐶 🐶 🐶\n";
+    } else {
+        cout << "🐱 🐱 🐱\n";
+    }
+
+    cout << "Name       : " << name << " / " << nickname << endl;
+    cout << "Birthday   : " << birthday << endl;
+    cout << "Address    : " << address << endl;
+    cout << "Fav Song   : " << favSong << endl;
+    cout << "Motivation : " << motivation << endl;
+    cout << "Support    : " << support << endl;
+
+    cout << "=========================================\n";
+}
+
+int main() {
+
+    // Hard-coded information
+    string pet = "Dog";
+    string name = "Mizrael M. Destao Jr.";
+    string nickname = "Jr.";
+    string birthday = "March 20, 2003";
+    string address = "Block 9, Lot 19 & 21, Villa Christina Subdivision, Brgy. Cagbang, Oton, Iloilo";
+    string favSong = "Salamat";
+    string motivation = "Family and dreams";
+    string support = "More time to complete activities and deadlines.";
+
+    displayProfile(pet, name, nickname, birthday, address,
+                   favSong, motivation, support);
+
+    return 0;
+}
