@@ -1,6 +1,8 @@
 import java.util.Random;
 
 public class RacingCar {
+    private static final long SLEEP_TIME = 500;
+
     public static void main(String[] args) {
         Random random = new Random();
 
@@ -10,29 +12,29 @@ public class RacingCar {
 
         System.out.println("🏁 RACING CAR GAME  🏁");
 
-        while (car1 < finishLine && car2 < finishLine) {
-            car1 += random.nextInt(4) + 1;
-            car2 += random.nextInt(4) + 1;
+        try {
+            while (car1 < finishLine && car2 < finishLine) {
+                car1 += random.nextInt(4) + 1;
+                car2 += random.nextInt(4) + 1;
 
-            System.out.print("Car 1: ");
-            for (int i = 0; i < car1; i++) {
-                System.out.print("-");
+                System.out.print("Car 1: ");
+                for (int i = 0; i < car1; i++) {
+                    System.out.print("-");
+                }
+                System.out.println("🚗");
+
+                System.out.print("Car 2: ");
+                for (int i = 0; i < car2; i++) {
+                    System.out.print("-");
+                }
+                System.out.println("  🏎️");
+
+                System.out.println("-------------------------");
+
+                Thread.sleep(SLEEP_TIME);
             }
-            System.out.println("🚗");
-
-            System.out.print("Car 2: ");
-            for (int i = 0; i < car2; i++) {
-                System.out.print("-");
-            }
-            System.out.println("  🏎️");
-
-            System.out.println("-------------------------");
-
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
 
         if (car1 >= finishLine && car2 >= finishLine) {

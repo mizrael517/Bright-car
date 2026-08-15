@@ -1,6 +1,5 @@
 public class PersonalProfile 
 { 
-    // Method with multiple parameters 
     public static void displayProfile
     ( String petPreference, 
     String name, 
@@ -12,8 +11,9 @@ public class PersonalProfile
      String support, 
      String personalQuote) {
          System.out.println("========================================"); 
-         System.out.println(" PERSONAL PROFILE"); System.out.println("========================================"); 
-         // Conditional statement for pet person 
+         System.out.println(" PERSONAL PROFILE"); 
+         System.out.println("========================================"); 
+ 
          if (petPreference.equalsIgnoreCase("Dog Person")) { 
             System.out.println("Pet Person : I am a Dog Person"); 
         } else {
@@ -28,14 +28,17 @@ public class PersonalProfile
              System.out.println("Personal Quote : " + personalQuote); 
              System.out.println("========================================"); } 
              public static void main(String[] args) { 
-                // Variables 
+                 
                 String petPreference = "Dog Person"; 
                 String name = "Mizrael M. Destao Jr.";
-                String nickname = "Jr."; String birthday = 
-                "March 20, 2003"; String address = "Block 9, Lot 19, 21, Villa Christina Subdivision, Brgy. Cagbang, Oton, Iloilo"; 
-                String favoriteSong = "Salamat"; String motivation = "Family and dreams"; 
-                String support = "Psychosocial and love"; String personalQuote = "Believe in yourself and keep moving forward."; 
-                // Calling the method 
+                String nickname = "Jr."; 
+                String birthday = "March 20, 2003"; \
+                String address = "Block 9, Lot 19, 21, Villa Christina Subdivision, Brgy. Cagbang, Oton, Iloilo"; 
+                String favoriteSong = "Salamat"; 
+                String motivation = "Family and dreams"; 
+                String support = "Psychosocial and love"; 
+                String personalQuote = "Believe in yourself and keep moving forward."; 
+ 
                 displayProfile
                 ( petPreference, 
                 name, 
