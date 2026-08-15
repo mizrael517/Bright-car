@@ -1,76 +1,71 @@
-public class Main {
+# Personal Profile
 
-    public static void main(String[] args) {
+## Description
 
-        String[] students = {
-            "Alex",
-            "Bianca",
-            "Carlos",
-            "Diana",
-            "Ethan",
-            "Faith",
-            "Gabriel",
-            "Hannah"
-        };
+A simple Java program that displays a personal profile using a custom method and predefined information.
 
-        int[] attendance = {
-            95, 82, 68, 91, 74, 88, 59, 100
-        };
+## Features
 
-        System.out.println("====================================");
-        System.out.println("      STUDENT ATTENDANCE CHECK");
-        System.out.println("====================================");
+- Displays personal information in an organized format
+- Uses a separate displayProfile() method
+- Passes multiple values as method parameters
+- Uses an if-else conditional statement for the pet preference
+- Uses hard-coded information, so no user input is required
 
-        displayAttendance(students, attendance);
+## Information Displayed
 
-        double average = calculateAverage(attendance);
+- Pet Preference
+- Name
+- Nickname
+- Birthday
+- Address
+- Favorite Song
+- Motivation
+- Support Needed
+- Personal Quote
 
-        System.out.println();
-        System.out.println("Average Attendance: " + average + "%");
+## Concepts Used
 
-        System.out.println();
-        System.out.println("Attendance Status:");
-        checkAttendance(students, attendance);
-    }
+- Methods
+- Parameters
+- Variables
+- Strings
+- Conditional Statements
+- System.out.println()
+- equalsIgnoreCase()
 
-    // Method 1: Display student attendance
-    public static void displayAttendance(String[] students, int[] attendance) {
+## How to Run
 
-        for (int i = 0; i < students.length; i++) {
-            System.out.println(
-                students[i] + " - " + attendance[i] + "%"
-            );
-        }
-    }
+Open PersonalProfile.java using a Java compiler such as *OnlineGDB* or *Visual Studio Code*.
 
-    // Method 2: Calculate average attendance
-    public static double calculateAverage(int[] attendance) {
+For OnlineGDB:
 
-        int total = 0;
+1. Select *Java* as the language.
+2. Make sure the class/file is named PersonalProfile.
+3. Paste the code into the editor.
+4. Click *Run*.
 
-        for (int percentage : attendance) {
-            total += percentage;
-        }
+## Sample Output
 
-        return (double) total / attendance.length;
-    }
+text
+========================================
+          PERSONAL PROFILE
+========================================
+Pet Person : I am a Dog Person
+Name : Mizrael M. Destao Jr.
+Nickname : Jr.
+Birthday : March 20, 2003
+Address : Block 9, Lot 19, 21, Villa Christina Subdivision, Brgy. Cagbang, Oton, Iloilo
+Favorite Song : Salamat
+Motivation : Family and dreams
+Support Needed : Psychosocial and love
+Personal Quote : Believe in yourself and keep moving forward.
+========================================
 
-    // Method 3: Check attendance status
-    public static void checkAttendance(
-            String[] students,
-            int[] attendance) {
+## Purpose
 
-        for (int i = 0; i < students.length; i++) {
+This program was created as a Java programming exercise to demonstrate the use of methods, parameters, variables, conditional statements, and formatted output.
 
-            if (attendance[i] >= 75) {
-                System.out.println(
-                    students[i] + " - GOOD ATTENDANCE"
-                );
-            } else {
-                System.out.println(
-                    students[i] + " - LOW ATTENDANCE"
-                );
-            }
-        }
-    }
-}
+## Author
+
+*Mizrael M. Destao Jr.*
