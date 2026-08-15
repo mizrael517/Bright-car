@@ -32,7 +32,6 @@ public class Main {
         checkAttendance(students, attendance);
     }
 
-    // Method 1: Display student attendance
     public static void displayAttendance(String[] students, int[] attendance) {
 
         for (int i = 0; i < students.length; i++) {
@@ -42,7 +41,6 @@ public class Main {
         }
     }
 
-    // Method 2: Calculate average attendance
     public static double calculateAverage(int[] attendance) {
 
         int total = 0;
@@ -54,7 +52,6 @@ public class Main {
         return (double) total / attendance.length;
     }
 
-    // Method 3: Check attendance status
     public static void checkAttendance(
             String[] students,
             int[] attendance) {
