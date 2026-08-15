@@ -1,53 +1,60 @@
-public class PersonalProfile 
-{ 
-    public static void displayProfile
-    ( String petPreference, 
-    String name, 
-    String nickname,
-    String birthday,
-     String address, 
-     String favoriteSong, 
-     String motivation, 
-     String support, 
-     String personalQuote) {
-         System.out.println("========================================"); 
-         System.out.println(" PERSONAL PROFILE"); 
-         System.out.println("========================================"); 
- 
-         if (petPreference.equalsIgnoreCase("Dog Person")) { 
-            System.out.println("Pet Person : I am a Dog Person"); 
+public class PersonalProfile {
+
+    public static void displayProfile(
+            String petPreference,
+            String name,
+            String nickname,
+            String birthday,
+            String address,
+            String favoriteSong,
+            String motivation,
+            String support,
+            String personalQuote) {
+
+        System.out.println("========================================");
+        System.out.println("          PERSONAL PROFILE");
+        System.out.println("========================================");
+
+        if (petPreference.equalsIgnoreCase("Dog Person")) {
+            System.out.println("Pet Person : I am a Dog Person");
         } else {
-             System.out.println("Pet Person : " + petPreference); } 
-             System.out.println("Name : " + name); 
-             System.out.println("Nickname : " + nickname); 
-             System.out.println("Birthday : " + birthday); 
-             System.out.println("Address : " + address); 
-             System.out.println("Favorite Song : " + favoriteSong); 
-             System.out.println("Motivation : " + motivation); 
-             System.out.println("Support Needed : " + support); 
-             System.out.println("Personal Quote : " + personalQuote); 
-             System.out.println("========================================"); } 
-             public static void main(String[] args) { 
-                 
-                String petPreference = "Dog Person"; 
-                String name = "Mizrael M. Destao Jr.";
-                String nickname = "Jr."; 
-                String birthday = "March 20, 2003"; \
-                String address = "Block 9, Lot 19, 21, Villa Christina Subdivision, Brgy. Cagbang, Oton, Iloilo"; 
-                String favoriteSong = "Salamat"; 
-                String motivation = "Family and dreams"; 
-                String support = "Psychosocial and love"; 
-                String personalQuote = "Believe in yourself and keep moving forward."; 
- 
-                displayProfile
-                ( petPreference, 
-                name, 
+            System.out.println("Pet Person : " + petPreference);
+        }
+
+        System.out.println("Name : " + name);
+        System.out.println("Nickname : " + nickname);
+        System.out.println("Birthday : " + birthday);
+        System.out.println("Address : " + address);
+        System.out.println("Favorite Song : " + favoriteSong);
+        System.out.println("Motivation : " + motivation);
+        System.out.println("Support Needed : " + support);
+        System.out.println("Personal Quote : " + personalQuote);
+
+        System.out.println("========================================");
+    }
+
+    public static void main(String[] args) {
+
+        String petPreference = "Dog Person";
+        String name = "Mizrael M. Destao Jr.";
+        String nickname = "Jr.";
+        String birthday = "March 20, 2003";
+        String address = "Block 9, Lot 19, 21, Villa Christina Subdivision, Brgy. Cagbang, Oton, Iloilo";
+        String favoriteSong = "Salamat";
+        String motivation = "Family and dreams";
+        String support = "Psychosocial and love";
+        String personalQuote = "Believe in yourself and keep moving forward.";
+
+        displayProfile(
+                petPreference,
+                name,
                 nickname,
-                 birthday, 
-                 address, 
-                 favoriteSong,
-                  motivation, 
-                  support, 
-                  personalQuote ); 
-                } 
-            }
+                birthday,
+                address,
+                favoriteSong,
+                motivation,
+                support,
+                personalQuote
+        );
+    }
+}

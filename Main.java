@@ -2,34 +2,75 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] numbers = {12, 7, 8, 15, 20, 3, 18, 5, 10};
+        String[] students = {
+            "Alex",
+            "Bianca",
+            "Carlos",
+            "Diana",
+            "Ethan",
+            "Faith",
+            "Gabriel",
+            "Hannah"
+        };
 
-        System.out.println("Array Elements:");
-        printArray(numbers);
+        int[] attendance = {
+            95, 82, 68, 91, 74, 88, 59, 100
+        };
 
-        int evenCount = countEvenNumbers(numbers);
+        System.out.println("====================================");
+        System.out.println("      STUDENT ATTENDANCE CHECK");
+        System.out.println("====================================");
 
-        System.out.println("\nTotal Even Numbers: " + evenCount);
-    }
+        displayAttendance(students, attendance);
 
-    // Utility method to print the array
-    public static void printArray(int[] array) {
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
+        double average = calculateAverage(attendance);
+
         System.out.println();
+        System.out.println("Average Attendance: " + average + "%");
+
+        System.out.println();
+        System.out.println("Attendance Status:");
+        checkAttendance(students, attendance);
     }
 
-    // Utility method that accepts an array and returns the number of even values
-    public static int countEvenNumbers(int[] array) {
-        int count = 0;
+    // Method 1: Display student attendance
+    public static void displayAttendance(String[] students, int[] attendance) {
 
-        for (int num : array) {
-            if (num % 2 == 0) {   // Conditional statement
-                count++;
+        for (int i = 0; i < students.length; i++) {
+            System.out.println(
+                students[i] + " - " + attendance[i] + "%"
+            );
+        }
+    }
+
+    // Method 2: Calculate average attendance
+    public static double calculateAverage(int[] attendance) {
+
+        int total = 0;
+
+        for (int percentage : attendance) {
+            total += percentage;
+        }
+
+        return (double) total / attendance.length;
+    }
+
+    // Method 3: Check attendance status
+    public static void checkAttendance(
+            String[] students,
+            int[] attendance) {
+
+        for (int i = 0; i < students.length; i++) {
+
+            if (attendance[i] >= 75) {
+                System.out.println(
+                    students[i] + " - GOOD ATTENDANCE"
+                );
+            } else {
+                System.out.println(
+                    students[i] + " - LOW ATTENDANCE"
+                );
             }
         }
-
-        return count;
     }
 }
