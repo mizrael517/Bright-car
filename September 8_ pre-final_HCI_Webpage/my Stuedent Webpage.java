@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Student Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            background: #1e40af;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            background: #1f2937;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 450px;
+            margin: 15% auto;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            float: right;
+            font-size: 28px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Semantic Header -->
+    <header>
+        <h1>My Student Webpage</h1>
+        <p>HTML Semantic Elements & JavaScript Modal</p>
+    </header>
+
+    <!-- Semantic Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <section id="home">
+            <h2>Welcome!</h2>
+            <p>
+                Welcome to my simple HTML webpage. This page demonstrates
+                semantic HTML elements, CSS styling, and JavaScript.
+            </p>
+
+            <button id="openModal">Click Me</button>
+        </section>
+
+        <section id="about">
+            <h2>About This Page</h2>
+            <p>
+                This webpage uses semantic elements such as
+                <strong>header</strong>, <strong>nav</strong>,
+                <strong>main</strong>, <strong>section</strong>, and
+                <strong>footer</strong>.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: student@example.com</p>
+        </section>
+
+    </main>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <h2>Hello! 👋</h2>
+            <p>
+                This is a dynamic modal created using HTML, CSS, and JavaScript!
+            </p>
+
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <p>&copy; 2026 My Student Webpage</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const modal = document.getElementById("myModal");
+        const openButton = document.getElementById("openModal");
+        const closeButton = document.querySelector(".close");
+        const closeModalButton = document.getElementById("closeModal");
+
+        // Open modal
+        openButton.onclick = function() {
+            modal.style.display = "block";
+        };
+
+        // Close modal using X
+        closeButton.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Close modal using button
+        closeModalButton.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Close modal by clicking outside
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
+</body>
+</html>
+```

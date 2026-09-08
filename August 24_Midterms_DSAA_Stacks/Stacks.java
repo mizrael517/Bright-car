@@ -23,4 +23,4 @@ public class Stacks {
         System.out.println("Customer picked up Plate #" + removedPlate);
         System.out.println("Top plate available now: Plate #" + plateStack.peek());
     }
-}
+} 
