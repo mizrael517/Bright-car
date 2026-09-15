@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coding Challenge | Dynamic Modal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #2563eb;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    /* Native Dialog Styling */
+    dialog {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      padding: 2rem;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(3px);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Semantic HTML Layout -->
+  <header>
+    <h1>Developer Portal</h1>
+    <nav>
+      <a href="#">Home</a> | <a href="#">About</a>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main>
+    <section>
+      <h2>Semantic Web Page</h2>
+      <p>This page uses semantic tags and pure JavaScript to trigger a dynamic modal.</p>
+      <button id="openBtn">Open Modal</button>
+    </section>
+  </main>
+
+  <!-- Dynamic Modal — Native <dialog> Element -->
+  <dialog id="modalDialog">
+    <h3>🎉 Dynamic Feature</h3>
+    <p>You triggered an accessible modal popup using vanilla JavaScript and the native &lt;dialog&gt; element!</p>
+    <button id="closeBtn">Close</button>
+  </dialog>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Developer Portal</p>
+  </footer>
+
+  <!-- JavaScript Execution -->
+  <script>
+    const modal = document.getElementById('modalDialog');
+    const openBtn = document.getElementById('openBtn');
+    const closeBtn = document.getElementById('closeBtn');
+
+    openBtn.addEventListener('click', () => modal.showModal());
+    closeBtn.addEventListener('click', () => modal.close());
+  </script>
+
+</body>
+</html>
